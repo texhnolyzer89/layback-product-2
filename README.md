@@ -1,6 +1,6 @@
-## Produto 1 Layback: 
+## Produto 2 Layback: 
 
-Demo minimalista de um cliente para interagir com o servidor oAuth2 (construído nos moldes do RFC 6749 https://datatracker.ietf.org/doc/html/rfc6749) que possui a funcionalidade de login e logout. 
+Demo minimalista de um cliente para interagir com o servidor oAuth2 (construído nos moldes do RFC 6749 https://datatracker.ietf.org/doc/html/rfc6749) que possui a funcionalidade de login e logout, e mostra as informações da conta do cliente na página principal. 
 
 ## Dependencies
 
