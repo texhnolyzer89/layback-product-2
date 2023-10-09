@@ -1,3 +1,7 @@
+## Produto 1 Layback: 
+
+Demo minimalista de um cliente para interagir com o servidor oAuth2 (construído nos moldes do RFC 6749 https://datatracker.ietf.org/doc/html/rfc6749) que possui a funcionalidade de login e logout. 
+
 ## Dependencies
 
 You must have the following programs installed on your machine in order to run this app:
@@ -9,32 +13,36 @@ You must have the following programs installed on your machine in order to run t
 
 ## Installation
 
-From the root folder, run the following command:
+Da pasta root, escreva o seguinte comando:
 
 ```
   make install
 ```
-
-After that, you can run the application with
+Depois disso, rode a aplicação em modo de desenvolvimento com:
 
 ```
   npm run dev
 ```
 
-To restart the database:
+Para reiniciar a base de dados:
 
 ```
   make restart-database
 ```
-In case you want to reset all database data, use this command (the docker image name will probably be postgres):
+Para apagar todos os dados da base de dados:
 ```
   docker images
   docker rmi -f <docker-image-name>
 ```
-## Warning
+É necessário criar um .env com as seguintes variáveis:
 
-1. If database data is wiped, no functionality will work, but you might remain authenticated, as the browser will still contain your valid JWT cookies.
+```
+DATABASE_URL=postgresql://postgres:senha@localhost:8082/basedados
 
-In this case, you must log-out and create a new account, which should work with the "Sign-in with Google" button.
-
-2. Microsoft sign-in temporarily suspended. To add the functionality one must sign-in to Microsoft Active Directory, create a project, get an API key and add it to .env. It will be added in future versions, once I get a new Microsoft account.
+NEXTAUTH_URL=http://64.176.3.252:3001
+PUBLIC_CONTALAYBACK_URL=http://64.176.3.252:3000
+SECRET=product1
+CONTALAYBACK_SECRET=contalayback
+NEXTAUTH_SECRET=product1
+```
+No ambiente de desenvolvimento basta utilizar o localhost no lugar do IP público.
