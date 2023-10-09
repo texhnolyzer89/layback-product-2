@@ -37,12 +37,12 @@ Para apagar todos os dados da base de dados:
 É necessário criar um .env com as seguintes variáveis:
 
 ```
-DATABASE_URL=postgresql://postgres:senha@localhost:8082/basedados
+DATABASE_URL=postgresql://postgres:senha@localhost:8083/basededados
 
-NEXTAUTH_URL=http://64.176.3.252:3001
+NEXTAUTH_URL=http://64.176.3.252:3002
 PUBLIC_CONTALAYBACK_URL=http://64.176.3.252:3000
-SECRET=product1
+SECRET=product2
 CONTALAYBACK_SECRET=contalayback
-NEXTAUTH_SECRET=product1
+NEXTAUTH_SECRET=product2
 ```
 No ambiente de desenvolvimento basta utilizar o localhost no lugar do IP público.
